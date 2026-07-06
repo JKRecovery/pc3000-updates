@@ -1,15 +1,17 @@
 {
-  "version": "1.6.1",
+  "version": "1.0.162",
   "notes": "Major update",
   "changelog": [
+    "NEW: Image content scanner (step 3) — stream integrity validation (JPEG/PNG) + pixel analysis (JPEG, PNG, GIF, BMP, TIFF, WEBP) detecting gray/color buffers, channel dropout, corruption bands (RAW camera formats not supported)",
+    "Pure C# JPEG/PNG stream validator — detects truncated/damaged streams (missing EOI etc.) without external tools",
     "Multi-stage checkpoint & resume (steps 1-3, per-file resume in image analysis)",
     "Resume prompt after Stop and after power loss",
     "Statistics now counted from actual folders (accurate after interruptions)",
     "Scan duration excludes pauses; average speed for actual scan time",
-    "Stats summary window with re-open button and TXT export (scan duration, speed, healthy estimate)",
+    "Stats summary window with re-open button and TXT export",
     "TXT export headers for all three lists, translated",
     "Move retry + copy fallback + move_errors_log.csv for unmovable files",
-    "Pure C# JPEG/PNG stream validator (no external czkawka)",
+    "Improved file counting on NAS shares (dedup/tiering reparse points, system files)",
     "Single Stop button for all steps; step name shown under buttons",
     "Auto-update from server",
     "Many translation fixes across 14 languages"
