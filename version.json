@@ -1,5 +1,5 @@
 {
-  "version": "1.0.162",
+  "version": "1.0.161",
   "notes": "Major update",
   "changelog": [
     "NEW: Image content scanner (step 3) — stream integrity validation (JPEG/PNG) + pixel analysis (JPEG, PNG, GIF, BMP, TIFF, WEBP) detecting gray/color buffers, channel dropout, corruption bands (RAW camera formats not supported)",
