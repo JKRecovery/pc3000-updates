@@ -1,0 +1,17 @@
+{
+  "version": "1.6.1",
+  "notes": "Major update",
+  "changelog": [
+    "Multi-stage checkpoint & resume (steps 1-3, per-file resume in image analysis)",
+    "Resume prompt after Stop and after power loss",
+    "Statistics now counted from actual folders (accurate after interruptions)",
+    "Scan duration excludes pauses; average speed for actual scan time",
+    "Stats summary window with re-open button and TXT export (scan duration, speed, healthy estimate)",
+    "TXT export headers for all three lists, translated",
+    "Move retry + copy fallback + move_errors_log.csv for unmovable files",
+    "Pure C# JPEG/PNG stream validator (no external czkawka)",
+    "Single Stop button for all steps; step name shown under buttons",
+    "Auto-update from server",
+    "Many translation fixes across 14 languages"
+  ]
+}
