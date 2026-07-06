@@ -1,5 +1,11 @@
 ﻿{
-  "version": "1.0.162",
-  "notes": "Major update",
-  "changelog": ["Auto-update from GitHub", "Image scanner", "Checkpoint & resume", "Stats from folders", "NAS long-path fix"]
+    "version":  "1.0.162",
+    "notes":  "Major update",
+    "changelog":  [
+                      "Auto-update from GitHub",
+                      "Image scanner",
+                      "Checkpoint \u0026 resume",
+                      "Stats from folders",
+                      "NAS long-path fix"
+                  ]
 }
