@@ -1,17 +1,17 @@
 ﻿{
-  "version": "1.0.165",
-  "notes": "Major reliability update",
-  "changelog": [
-    "NEW: Structure validators for DOCX/XLSX/XLSM/PPTX/DOC/XLS/XLK/PPT, PDF, ZIP/RAR archives, RAW (CR2/NEF/ARW/DNG), TIFF, MP4/MOV/M4V — CRC checks, stream decompression, sector-aligned zero-block detection",
-    "Full checkpoint & resume for EVERY step (1, 2, 3a, 3b) including mid-step progress, not just step boundaries — survives Stop and power loss with per-file granularity",
-    "Steps 1+2 (pattern + header) can run in a single combined pass when both enabled — fewer disk reads, fewer backend calls on large scans",
-    "\"Cancel, start over\" now immediately starts a fresh scan instead of just clearing the checkpoint",
-    "Fixed: files resumed after Stop are now correctly moved to destination folders (previously skipped)",
-    "Fixed: checkpoint timer leak after Stop that could keep re-writing stale progress",
-    "Fixed: files matching both pattern and bad-signature no longer queued for two destinations at once",
-    "Fixed: reduced false positives on image/PDF corruption detection (EXIF padding, sector-alignment requirement)",
-    "Auto-export of image/structure analysis results (image_analysis.txt) on scan completion",
-    "Debug console output and CSV diagnostic logs are now compiled out of Release builds (test builds unaffected)",
-    "Many translation fixes across 14 languages"
-  ]
+    "version":  "1.0.165",
+    "notes":  "Major reliability update",
+    "changelog":  [
+                      "NEW: Structure validators for DOCX/XLSX/XLSM/PPTX/DOC/XLS/XLK/PPT, PDF, ZIP/RAR archives, RAW (CR2/NEF/ARW/DNG), TIFF, MP4/MOV/M4V — CRC checks, stream decompression, sector-aligned zero-block detection",
+                      "Full checkpoint \u0026 resume for EVERY step (1, 2, 3a, 3b) including mid-step progress, not just step boundaries — survives Stop and power loss with per-file granularity",
+                      "Steps 1+2 (pattern + header) can run in a single combined pass when both enabled — fewer disk reads, fewer backend calls on large scans",
+                      "\"Cancel, start over\" now immediately starts a fresh scan instead of just clearing the checkpoint",
+                      "Fixed: files resumed after Stop are now correctly moved to destination folders (previously skipped)",
+                      "Fixed: checkpoint timer leak after Stop that could keep re-writing stale progress",
+                      "Fixed: files matching both pattern and bad-signature no longer queued for two destinations at once",
+                      "Fixed: reduced false positives on image/PDF corruption detection (EXIF padding, sector-alignment requirement)",
+                      "Auto-export of image/structure analysis results (image_analysis.txt) on scan completion",
+                      "Debug console output and CSV diagnostic logs are now compiled out of Release builds (test builds unaffected)",
+                      "Many translation fixes across 14 languages"
+                  ]
 }
