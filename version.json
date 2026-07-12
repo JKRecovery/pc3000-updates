@@ -1,17 +1,18 @@
 ﻿{
-    "version":  "1.0.170",
-    "notes":  "Major reliability update",
-    "changelog":  [
-                      "NEW: Structure validators for DOCX/XLSX/XLSM/PPTX/DOC/XLS/XLK/PPT, PDF, ZIP/RAR archives, RAW (CR2/NEF/ARW/DNG), TIFF, MP4/MOV/M4V — CRC checks, stream decompression, sector-aligned zero-block detection",
-                      "Full checkpoint \u0026 resume for EVERY step (1, 2, 3a, 3b) including mid-step progress, not just step boundaries — survives Stop and power loss with per-file granularity",
-                      "Steps 1+2 (pattern + header) can run in a single combined pass when both enabled — fewer disk reads, fewer backend calls on large scans",
-                      "\"Cancel, start over\" now immediately starts a fresh scan instead of just clearing the checkpoint",
-                      "Fixed: files resumed after Stop are now correctly moved to destination folders (previously skipped)",
-                      "Fixed: checkpoint timer leak after Stop that could keep re-writing stale progress",
-                      "Fixed: files matching both pattern and bad-signature no longer queued for two destinations at once",
-                      "Fixed: reduced false positives on image/PDF corruption detection (EXIF padding, sector-alignment requirement)",
-                      "Auto-export of image/structure analysis results (image_analysis.txt) on scan completion",
-                      "Debug console output and CSV diagnostic logs are now compiled out of Release builds (test builds unaffected)",
-                      "Many translation fixes across 14 languages"
-                  ]
+  "version": "1.0.170",
+  "notes": "Report layouts, ISO-BMFF signature fixes, diagnostic logging",
+  "changelog": [
+    "NEW: Report layout selector — Tree (classic) and Simple (stat-tile dashboard + filter pills), independent of color/shape presets",
+    "NEW: 5 visual styles now have real structural differences (border width, shadow, density), not just corner radius",
+    "NEW: Uncertain-file color now harmonizes with all 22 color presets instead of a fixed orange",
+    "Fixed: layout containers used a hardcoded 100vh-48px height assumption — broke when the UI font-size slider changed header height, leaving unfilled space",
+    "Fixed: sidebar/settings panel scroll stopped working after the above fix (grid rows need explicit sizing + min-height:0)",
+    "Fixed: stray extra closing </div> in the Scanner tab caused the Skanuj button and auto-report checkbox to render on every tab, not just Scanner",
+    "Fixed: MP4/MOV/3GP/3G2/3GP5/HEIC/CR3/M4A signatures hardcoded the ftyp box size (20/24/32 bytes only) — real files with other sizes (e.g. Sony XAVC, 28 bytes) were wrongly flagged as bad signature. Added size-independent ftyp-at-offset-4 fallback for all seven formats",
+    "Fixed: 6 MOV atom-name signatures (skip/pnot/wide/mdat/free/moov) checked offset 0 instead of offset 4 — could never match a real file",
+    "Fixed: structural validation (step 3a) was gated behind the CZK toggle only — now also runs when signature scan (step 2) is enabled",
+    "Fixed: settings live preview didn't reflect the Simple layout or its filter/search row",
+    "Debug/diagnostic CSV logs (czk_stream_log.csv, move_errors_log.csv, czk_allfiles_log.csv, czk_debug_log.csv) temporarily re-enabled in Release builds for troubleshooting — remember to restore [Conditional(\"DEBUG\")] before next client release",
+    "Removed: Explorer report layout (dropped in favor of Tree + Simple)"
+  ]
 }
