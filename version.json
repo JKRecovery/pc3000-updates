@@ -1,5 +1,5 @@
 ﻿{
-    "version":  "1.0.165",
+    "version":  "1.0.170",
     "notes":  "Major reliability update",
     "changelog":  [
                       "NEW: Structure validators for DOCX/XLSX/XLSM/PPTX/DOC/XLS/XLK/PPT, PDF, ZIP/RAR archives, RAW (CR2/NEF/ARW/DNG), TIFF, MP4/MOV/M4V — CRC checks, stream decompression, sector-aligned zero-block detection",
