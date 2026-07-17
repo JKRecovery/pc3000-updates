@@ -1,18 +1,18 @@
 ﻿{
-  "version": "1.0.170",
-  "notes": "Report layouts, ISO-BMFF signature fixes, diagnostic logging",
-  "changelog": [
-    "NEW: Report layout selector — Tree (classic) and Simple (stat-tile dashboard + filter pills), independent of color/shape presets",
-    "NEW: 5 visual styles now have real structural differences (border width, shadow, density), not just corner radius",
-    "NEW: Uncertain-file color now harmonizes with all 22 color presets instead of a fixed orange",
-    "Fixed: layout containers used a hardcoded 100vh-48px height assumption — broke when the UI font-size slider changed header height, leaving unfilled space",
-    "Fixed: sidebar/settings panel scroll stopped working after the above fix (grid rows need explicit sizing + min-height:0)",
-    "Fixed: stray extra closing </div> in the Scanner tab caused the Skanuj button and auto-report checkbox to render on every tab, not just Scanner",
-    "Fixed: MP4/MOV/3GP/3G2/3GP5/HEIC/CR3/M4A signatures hardcoded the ftyp box size (20/24/32 bytes only) — real files with other sizes (e.g. Sony XAVC, 28 bytes) were wrongly flagged as bad signature. Added size-independent ftyp-at-offset-4 fallback for all seven formats",
-    "Fixed: 6 MOV atom-name signatures (skip/pnot/wide/mdat/free/moov) checked offset 0 instead of offset 4 — could never match a real file",
-    "Fixed: structural validation (step 3a) was gated behind the CZK toggle only — now also runs when signature scan (step 2) is enabled",
-    "Fixed: settings live preview didn't reflect the Simple layout or its filter/search row",
-    "Debug/diagnostic CSV logs (czk_stream_log.csv, move_errors_log.csv, czk_allfiles_log.csv, czk_debug_log.csv) temporarily re-enabled in Release builds for troubleshooting — remember to restore [Conditional(\"DEBUG\")] before next client release",
-    "Removed: Explorer report layout (dropped in favor of Tree + Simple)"
-  ]
+    "version":  "1.0.175",
+    "notes":  "Report layouts, ISO-BMFF signature fixes, diagnostic logging",
+    "changelog":  [
+                      "NEW: Report layout selector — Tree (classic) and Simple (stat-tile dashboard + filter pills), independent of color/shape presets",
+                      "NEW: 5 visual styles now have real structural differences (border width, shadow, density), not just corner radius",
+                      "NEW: Uncertain-file color now harmonizes with all 22 color presets instead of a fixed orange",
+                      "Fixed: layout containers used a hardcoded 100vh-48px height assumption — broke when the UI font-size slider changed header height, leaving unfilled space",
+                      "Fixed: sidebar/settings panel scroll stopped working after the above fix (grid rows need explicit sizing + min-height:0)",
+                      "Fixed: stray extra closing \u003c/div\u003e in the Scanner tab caused the Skanuj button and auto-report checkbox to render on every tab, not just Scanner",
+                      "Fixed: MP4/MOV/3GP/3G2/3GP5/HEIC/CR3/M4A signatures hardcoded the ftyp box size (20/24/32 bytes only) — real files with other sizes (e.g. Sony XAVC, 28 bytes) were wrongly flagged as bad signature. Added size-independent ftyp-at-offset-4 fallback for all seven formats",
+                      "Fixed: 6 MOV atom-name signatures (skip/pnot/wide/mdat/free/moov) checked offset 0 instead of offset 4 — could never match a real file",
+                      "Fixed: structural validation (step 3a) was gated behind the CZK toggle only — now also runs when signature scan (step 2) is enabled",
+                      "Fixed: settings live preview didn\u0027t reflect the Simple layout or its filter/search row",
+                      "Debug/diagnostic CSV logs (czk_stream_log.csv, move_errors_log.csv, czk_allfiles_log.csv, czk_debug_log.csv) temporarily re-enabled in Release builds for troubleshooting — remember to restore [Conditional(\"DEBUG\")] before next client release",
+                      "Removed: Explorer report layout (dropped in favor of Tree + Simple)"
+                  ]
 }
