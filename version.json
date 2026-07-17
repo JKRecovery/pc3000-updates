@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.175",
+  "version": "1.0.176",
   "notes": "Four new independent recovery tools, live folder structure preview, quick interface theming",
   "changelog": [
     "NEW: \"Detect invalid data\" — detects filler patterns some drives (e.g. Rosewood series) write into unreadable sectors instead of real data. Runs as its own independent pass with its own destination folder for detected files. Built-in sEDU/btTEC patterns, custom patterns supported",
