@@ -1,15 +1,7 @@
 ﻿{
-  "version": "1.0.176",
-  "notes": "Four new independent recovery tools, live folder structure preview, quick interface theming",
+  "version": "1.0.177",
+  "notes": "sEDU/btTEC detection fix",
   "changelog": [
-    "NEW: \"Detect invalid data\" — detects filler patterns some drives (e.g. Rosewood series) write into unreadable sectors instead of real data. Runs as its own independent pass with its own destination folder for detected files. Built-in sEDU/btTEC patterns, custom patterns supported",
-    "NEW: \"Restore extensions\" — checks files with no extension (or a generic one, e.g. .chk from CHKDSK) against the full 579-entry signature database and creates a correctly-extensioned copy next to the original. Original file is never touched",
-    "NEW: \"Restore names from metadata\" — generates a descriptive filename from DOCX/XLSX document properties (title/author/creation date). This is NOT a recovery of the original filename — no file format stores that — it's a new, useful name generated from whatever metadata is present",
-    "NEW: \"Merge copies\" — combines 2-4 copies of the same recovered module, taking working bytes from whichever copy doesn't have the DE-AD filler pattern at each position. Optional automatic checksum calculation and write-back",
-    "NEW: Folder structure preview directly in the Generator tab, not just in the exported report — click to browse, works identically for CSV-loaded and folder-scanned data, and groups by partition when multiple CSVs are loaded at once",
-    "NEW: Quick 4-color interface theme switcher next to the font-size slider — changes only the live app's own look, completely independent from the exported report's color settings",
-    "All four new tools are fully translated across all 14 supported languages, with in-app instructions explaining how each one works",
-    "Fixed: MP4/MOV/3GP/HEIC/CR3/M4A signature detection hardcoded a single header size, wrongly flagging valid files from some cameras (e.g. Sony XAVC) as damaged",
-    "Fixed: various report layout, scrolling and settings-collapse issues from the previous release cycle"
+    "Fixed: sEDU/btTEC invalid-data pattern detection now matches PC-3000's sector-offset logic, avoiding false positives"
   ]
 }
