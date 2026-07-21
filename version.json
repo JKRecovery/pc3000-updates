@@ -1,10 +1,10 @@
 ﻿{
-  "version": "1.0.179",
-  "notes": "Empty folders now shown in tree and report, output folder setting no longer resets",
-  "changelog": [
-    "Fixed: empty folders (and folders listed only as directory entries in the PC-3000 CSV) were completely missing from both the live folder-structure preview and the exported report, at any nesting depth",
-    "Fixed: the saved report location (fixed output folder) reset back to default every time the app started, regardless of what was previously chosen",
-    "Fixed: a small number of files appearing directly in a folder could show up as fake sub-folders in the structure preview",
-    "DevTools disabled by default"
-  ]
+    "version":  "1.0.179",
+    "notes":  "Empty folders now shown in tree and report, output folder setting no longer resets",
+    "changelog":  [
+                      "Fixed: empty folders (and folders listed only as directory entries in the PC-3000 CSV) were completely missing from both the live folder-structure preview and the exported report, at any nesting depth",
+                      "Fixed: the saved report location (fixed output folder) reset back to default every time the app started, regardless of what was previously chosen",
+                      "Fixed: a small number of files appearing directly in a folder could show up as fake sub-folders in the structure preview",
+                      "DevTools disabled by default"
+                  ]
 }
