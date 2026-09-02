@@ -1,12 +1,10 @@
 ﻿{
-  "version": "1.0.185",
-  "notes": "Fixed multi-million-file folder freeze, DOC/DOCX signature disambiguation, scan step independence",
+  "version": "1.0.190",
+  "notes": "Fixed folder file-counting accuracy on NAS/network shares and reparse points",
   "changelog": [
-    "Fixed: generating a report from a folder with millions of files (e.g. HFS Time Machine backups) froze the entire app with no feedback — folder counting now runs in the background with a live progress counter",
-    "Fixed: DOCX/XLSX/PPTX (and DOC/XLS/PPT) share identical file headers within their format family — signature verification now looks inside the file (ZIP contents or OLE stream names) to correctly tell them apart instead of just matching the header",
-    "Fixed: the structural/stream integrity check no longer runs just because Signature verification is enabled — it now depends only on \"File content analysis\", matching its checkbox",
-    "Fixed: scan summary mislabeled structural-check results as \"pixel damage\" even when pixel analysis never ran — now shown as a separate, correctly labeled line",
-    "Fixed: a step could still scan files already moved into another step's destination folder in one case (pixel analysis step)",
-    "Swapped the order of \"File content analysis\" and \"Signature verification\" in the Scanner tab"
+    "Fixed: counting files from a folder on network storage (NAS/QNAP) or containing reparse points could silently undercount by a large margin, or in rare cases hang or crash — an internal file-listing step tried to fully \"open\" certain entries, and a single unusual file could abort counting for that entire subfolder. File listing now uses the same low-level Windows API as tools like Everything/TreeSize, reading directory entries directly without opening them — verified to match an independent reference count exactly on a real 700,000+ file NAS share",
+    "Added: a Stop button while counting files from a folder, so a very large or slow scan can be cancelled",
+    "Added: elapsed time shown next to the live file counter",
+    "Added: protection against circular folder links (symbolic links/junctions pointing back to an ancestor folder), which could previously cause a crash"
   ]
 }
