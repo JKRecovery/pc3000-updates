@@ -1,10 +1,14 @@
 ﻿{
-  "version": "1.0.190",
-  "notes": "Fixed folder file-counting accuracy on NAS/network shares and reparse points",
+  "version": "1.0.200",
+  "notes": "Interactive HTML reports with photo thumbnail previews, damaged-photo detection, and customizable naming",
   "changelog": [
-    "Fixed: counting files from a folder on network storage (NAS/QNAP) or containing reparse points could silently undercount by a large margin, or in rare cases hang or crash — an internal file-listing step tried to fully \"open\" certain entries, and a single unusual file could abort counting for that entire subfolder. File listing now uses the same low-level Windows API as tools like Everything/TreeSize, reading directory entries directly without opening them — verified to match an independent reference count exactly on a real 700,000+ file NAS share",
-    "Added: a Stop button while counting files from a folder, so a very large or slow scan can be cancelled",
-    "Added: elapsed time shown next to the live file counter",
-    "Added: protection against circular folder links (symbolic links/junctions pointing back to an ancestor folder), which could previously cause a crash"
+    "Added: generate thumbnails for recovered photos, either standalone (a folder of images ready to zip and send) or embedded directly into the interactive HTML report — clients see actual photo previews with hover and full-size lightbox navigation, without needing the full original files",
+    "Added: thumbnail coverage can be limited to a percentage of photos per folder (to keep the report/package small) — the report clearly states the coverage percentage to the client, and the label updates correctly when switching the report's language",
+    "Added: detects photos that fail to decode or look visually damaged (solid-color blocks, black frames, partial corruption) during thumbnail generation, and flags them for review in the report — including cases the original signature/structure scan didn't catch",
+    "Added: when a base output folder is configured, reports with thumbnails are written directly there (auto-named by case) instead of round-tripping through the source drive — important when the source is a fragile/space-limited recovery drive",
+    "Added: a custom {C} token for filenames, case names, and report titles (e.g. a company name), alongside the existing {F}/{D}/{T}/{N}/{B}/{L} tokens — case name now supports the full token set and remembers your template between sessions",
+    "Added: live previews for the computed filename, case name, and destination folder name, so it's clear what will actually be generated before you click",
+    "Fixed: folder-picker dialogs sometimes showed the wrong description (e.g. the scan-folder picker showed the report-save-folder text) and never translated into the selected app language",
+    "Fixed: generating a report with thumbnails from the Scanner tab could leave a duplicate copy of the thumbnail folder behind on the source drive after the report was saved"
   ]
 }
