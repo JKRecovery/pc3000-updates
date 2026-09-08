@@ -1,14 +1,16 @@
 ﻿{
-  "version": "1.0.200",
-  "notes": "Interactive HTML reports with photo thumbnail previews, damaged-photo detection, and customizable naming",
+  "version": "1.0.205",
+  "notes": "Scanner tab renamed to Tools, RAW scan disclosure banner, thumbnail path fixes",
   "changelog": [
-    "Added: generate thumbnails for recovered photos, either standalone (a folder of images ready to zip and send) or embedded directly into the interactive HTML report — clients see actual photo previews with hover and full-size lightbox navigation, without needing the full original files",
-    "Added: thumbnail coverage can be limited to a percentage of photos per folder (to keep the report/package small) — the report clearly states the coverage percentage to the client, and the label updates correctly when switching the report's language",
-    "Added: detects photos that fail to decode or look visually damaged (solid-color blocks, black frames, partial corruption) during thumbnail generation, and flags them for review in the report — including cases the original signature/structure scan didn't catch",
-    "Added: when a base output folder is configured, reports with thumbnails are written directly there (auto-named by case) instead of round-tripping through the source drive — important when the source is a fragile/space-limited recovery drive",
-    "Added: a custom {C} token for filenames, case names, and report titles (e.g. a company name), alongside the existing {F}/{D}/{T}/{N}/{B}/{L} tokens — case name now supports the full token set and remembers your template between sessions",
-    "Added: live previews for the computed filename, case name, and destination folder name, so it's clear what will actually be generated before you click",
-    "Fixed: folder-picker dialogs sometimes showed the wrong description (e.g. the scan-folder picker showed the report-save-folder text) and never translated into the selected app language",
-    "Fixed: generating a report with thumbnails from the Scanner tab could leave a duplicate copy of the thumbnail folder behind on the source drive after the report was saved"
+    "Added: option to mark a report as a RAW scan result — shows an editable warning banner in the generated report explaining that files were found directly on the disk (structure could not be read), may be damaged/incomplete, and original names/folders might not be recoverable. Comes with a ready-to-use default text, already translated into all 14 report languages, which can be overridden with your own",
+    "Renamed: the 'Scanner' tab is now called 'Tools' (in all 14 app languages) — it has grown well beyond just scanning (signature verification, thumbnails, extension/name recovery, copy merging, and more)",
+    "Fixed: with 'Show OK/Damaged statistics' turned off, the Status column now disappears entirely from the report table (header and all rows), and row colors turn neutral instead of green/red/orange — previously only the top summary numbers respected this setting",
+    "Fixed: JPG/JPEG/JPE signature database was missing the Adobe APP14 marker (FF D8 FF EE) — fully valid photos from Photoshop/Lightroom were being flagged as bad-signature and moved to the damaged-files folder",
+    "Fixed: photos exported from certain Motion-JPEG/AVI sources have a couple of stray bytes before the real JPEG start — the structure validator now tolerates a small offset instead of rejecting the file outright",
+    "Fixed: a TXT bad-file report and CSV file list exported from PC-3000 in different contexts (e.g. one from the drive root, one from a specific user folder) could use different path prefixes and fail to match — paths are now normalized so both link up correctly, including files that only exist in the TXT report",
+    "Fixed: the folder/file picker dialogs no longer 'remember' each other's last location — each field now starts from its own current value",
+    "Fixed: thumbnails generated from the Scanner tab were being written to a temporary location in the source folder even when a base output folder was already configured, instead of going straight to the destination",
+    "Fixed: files with a successfully generated but visually corrupted thumbnail (solid color, mostly black, or a damaged band partway through the image) are now flagged for review in the report and the thumbnail is still shown, instead of being silently hidden",
+    "Fixed: the Generator tab's file preview now supports folder-by-folder navigation with a breadcrumb trail, matching how the final report behaves, instead of showing a flat list of every file at once"
   ]
 }
