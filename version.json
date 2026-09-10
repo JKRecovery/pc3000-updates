@@ -1,16 +1,18 @@
 ﻿{
-  "version": "1.0.205",
-  "notes": "Scanner tab renamed to Tools, RAW scan disclosure banner, thumbnail path fixes",
+  "version": "1.0.215",
+  "notes": "All 6 'move to folder' fields are now correctly recognized in reports, and the app's own preview matches the report colors.",
   "changelog": [
-    "Added: option to mark a report as a RAW scan result — shows an editable warning banner in the generated report explaining that files were found directly on the disk (structure could not be read), may be damaged/incomplete, and original names/folders might not be recoverable. Comes with a ready-to-use default text, already translated into all 14 report languages, which can be overridden with your own",
-    "Renamed: the 'Scanner' tab is now called 'Tools' (in all 14 app languages) — it has grown well beyond just scanning (signature verification, thumbnails, extension/name recovery, copy merging, and more)",
-    "Fixed: with 'Show OK/Damaged statistics' turned off, the Status column now disappears entirely from the report table (header and all rows), and row colors turn neutral instead of green/red/orange — previously only the top summary numbers respected this setting",
-    "Fixed: JPG/JPEG/JPE signature database was missing the Adobe APP14 marker (FF D8 FF EE) — fully valid photos from Photoshop/Lightroom were being flagged as bad-signature and moved to the damaged-files folder",
-    "Fixed: photos exported from certain Motion-JPEG/AVI sources have a couple of stray bytes before the real JPEG start — the structure validator now tolerates a small offset instead of rejecting the file outright",
-    "Fixed: a TXT bad-file report and CSV file list exported from PC-3000 in different contexts (e.g. one from the drive root, one from a specific user folder) could use different path prefixes and fail to match — paths are now normalized so both link up correctly, including files that only exist in the TXT report",
-    "Fixed: the folder/file picker dialogs no longer 'remember' each other's last location — each field now starts from its own current value",
-    "Fixed: thumbnails generated from the Scanner tab were being written to a temporary location in the source folder even when a base output folder was already configured, instead of going straight to the destination",
-    "Fixed: files with a successfully generated but visually corrupted thumbnail (solid color, mostly black, or a damaged band partway through the image) are now flagged for review in the report and the thumbnail is still shown, instead of being silently hidden",
-    "Fixed: the Generator tab's file preview now supports folder-by-folder navigation with a breadcrumb trail, matching how the final report behaves, instead of showing a flat list of every file at once"
+    "Added: all 6 'move to folder' fields (bad-files, signatures, content analysis x2, HEX/Text scanner, invalid data) are now recognized automatically when building a report — any matching folder is flagged, even if that specific tool wasn't run this session",
+    "Fixed: the bad-files folder field could show a name you never actually typed — now stays empty until you fill it in",
+    "Fixed: the signature-verification folder name wasn't being recognized in reports at all — now works like every other folder field",
+    "Fixed: an 'Uncertain' folder match now always counts, not only when whole-folder verification is turned on",
+    "Fixed: the Generator's own preview now shows Uncertain (orange) files correctly, matching the final report",
+    "Modernized: interface language now follows your Windows language automatically on first run",
+    "Modernized: non-photo files no longer falsely show 'OK' in thumbnail reports — only files actually checked get a status",
+    "Modernized: turning verification off no longer regenerates all thumbnails from scratch — much faster",
+    "Fixed: switching the source folder in thumbnail settings could silently load images for the wrong folder",
+    "Fixed: Uncertain and unverified files are now counted correctly everywhere — top summary and per-folder stats",
+    "Added: 'Verify certain/uncertain across the whole folder' option for accurate full-folder damage counts",
+    "Added: '% uncertain by' percentage option in Settings"
   ]
 }
