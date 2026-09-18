@@ -1,7 +1,8 @@
 ﻿{
-  "version": "1.0.222",
-  "notes": "Version 1.0.222 — fixes a NAS/reparse-point crash in the HEX/Text scanner (\"Skaner\").",
+  "version": "1.0.225",
+  "notes": "Version 1.0.225 — added optional network settings sync for labs with multiple computers.",
   "changelog": [
-    "Fixed: running the HEX/Text scanner against a network (NAS) task could throw a blocking \"could not open the file\" error on certain reparse-point-heavy folders and stop the scan. The scanner now uses the same tolerant native file-walking already used elsewhere in the app, so it skips past problem entries instead of aborting."
+    "New: optional network sync for lab settings. In Settings, point every computer in your lab at the same shared network folder and partner/lab data will sync automatically between them — including catching up automatically once a computer that was temporarily offline reconnects.",
+    "Changed: photo thumbnails (\"Generuj miniaturki zdjęć\" / \"Miniaturki + raport HTML\") are still saved at the lower default JPEG quality introduced in 1.0.223, resulting in meaningfully smaller files with no noticeable visual difference at thumbnail size."
   ]
 }
