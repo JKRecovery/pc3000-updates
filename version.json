@@ -1,8 +1,7 @@
 ﻿{
-  "version": "1.0.225",
-  "notes": "Version 1.0.225 — added optional network settings sync for labs with multiple computers.",
+  "version": "1.0.226",
+  "notes": "Version 1.0.226 — fixes a bug when saving the client-selection (acerep) report as ZIP.",
   "changelog": [
-    "New: optional network sync for lab settings. In Settings, point every computer in your lab at the same shared network folder and partner/lab data will sync automatically between them — including catching up automatically once a computer that was temporarily offline reconnects.",
-    "Changed: photo thumbnails (\"Generuj miniaturki zdjęć\" / \"Miniaturki + raport HTML\") are still saved at the lower default JPEG quality introduced in 1.0.223, resulting in meaningfully smaller files with no noticeable visual difference at thumbnail size."
+    "Fixed: saving the client-selection report (acerep panel) as ZIP could save the file with a \".html\" name instead of \".zip\", even though the file type was correctly set to ZIP in the save dialog."
   ]
 }
