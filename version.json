@@ -1,7 +1,11 @@
 ﻿{
-  "version": "1.0.226",
-  "notes": "Version 1.0.226 — fixes a bug when saving the client-selection (acerep) report as ZIP.",
+  "version": "1.0.230",
+  "notes": "Version 1.0.230 — multi-partition .acerep reports and more accurate damaged-file detection.",
   "changelog": [
-    "Fixed: saving the client-selection report (acerep panel) as ZIP could save the file with a \".html\" name instead of \".zip\", even though the file type was correctly set to ZIP in the save dialog."
+    "New: one client .acerep report for several partitions — one .roa file per partition.",
+    "New: import file lists from R-Studio, DMDE and UFS Explorer; deleted files from R-Studio are marked yellow.",
+    "New: reuse previously generated thumbnails; Stop button for thumbnails and recovery tools.",
+    "Improved: much more accurate detection of damaged JPEG, PNG, PDF and Office files.",
+    "Fixed: WebP no longer marked as damaged; thumbnail % setting is remembered."
   ]
 }
