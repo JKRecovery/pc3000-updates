@@ -1,11 +1,11 @@
 ﻿{
-  "version": "1.0.230",
-  "notes": "Version 1.0.230 — multi-partition .acerep reports and more accurate damaged-file detection.",
+  "version": "1.0.235",
+  "notes": "Version 1.0.235 — signature database expanded to 428 file types (682 signatures) and smarter extension recovery.",
   "changelog": [
-    "New: one client .acerep report for several partitions — one .roa file per partition.",
-    "New: import file lists from R-Studio, DMDE and UFS Explorer; deleted files from R-Studio are marked yellow.",
-    "New: reuse previously generated thumbnails; Stop button for thumbnails and recovery tools.",
-    "Improved: much more accurate detection of damaged JPEG, PNG, PDF and Office files.",
-    "Fixed: WebP no longer marked as damaged; thumbnail % setting is remembered."
+    "New: signature database expanded to 428 file types (682 signatures) — RAW files from all major camera brands, HEIF/AVIF, camera video (MTS, R3D, BRAW, MXF), Apple iWork, LibreOffice, KeePass, virtual disks and more.",
+    "Fixed: newer Nikon NEF and other RAW files were wrongly reported as having a bad signature.",
+    "Improved: Recover extensions creates one copy with the correct extension instead of one copy per matching type.",
+    "Fixed: signature verification run together with the HEX scan now checks only the selected extensions.",
+    "Also includes everything from 1.0.230: multi-partition .acerep reports, R-Studio/DMDE/UFS Explorer import, reusable thumbnails, more accurate damaged-file detection."
   ]
 }
