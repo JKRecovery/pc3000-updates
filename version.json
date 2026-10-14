@@ -1,9 +1,15 @@
 ﻿{
-  "version": "1.0.236",
-  "notes": "Version 1.0.236 — report fixes.",
+  "version": "1.0.250",
+  "notes": "Version 1.0.250 — new report skins, thumbnail gallery, video and RAW thumbnails, watermark, PDF report.",
   "changelog": [
-    "Fixed: report folders with more than 500 files now show the page switcher, so all files (including damaged ones) can be browsed.",
-    "Fixed: \"Clear filters\" after a search restores the statistics of the current folder.",
-    "Fixed: a report could show \"No results\" in every folder when one top-level folder contained only a few files."
+    "New report skins (Modern, Hero, Minimal, Brand) with tiles, rings or pills for statistics — also in the .acerep client report.",
+    "Fixed .acerep client report: the .roa selection now marks only the chosen folders in PC-3000, also when the .acerep was exported for selected folders only (previously the whole drive or whole folders could be selected).",
+    "Thumbnail gallery view in the report (List / Gallery, S/M/L size).",
+    "Thumbnails from RAW photos (from the JPG preview stored in the file) and videos (5-frame strip, animated in the report).",
+    "Fast thumbnails without verification: only the beginning of RAW files is read; with verification on, large files take longer. New \"Include RAW photos\" option to skip RAW files.",
+    "Watermark on thumbnails: lab logo or any image; partner reports use the partner's logo, reports without lab data a text watermark.",
+    "One-page PDF report for the client (also without lab data and for a partner, optionally in ZIP); can be turned off in Settings.",
+    "HEIC/HEIF structure check in Content Analysis; search across all partitions in the report.",
+    "Fixes: crashes on damaged videos, settings not always remembered, size sliders in new skins; reports without verification show only file totals; messages after generating thumbnails follow the app language."
   ]
 }
