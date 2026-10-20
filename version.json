@@ -1,15 +1,15 @@
 ﻿{
-  "version": "1.0.250",
-  "notes": "Version 1.0.250 — new report skins, thumbnail gallery, video and RAW thumbnails, watermark, PDF report.",
+  "version": "1.0.260",
+  "notes": "Version 1.0.260 — 22 languages, PDF report settings window with editable texts, collapsible menu, instruction pop-up in the client selection report.",
   "changelog": [
-    "New report skins (Modern, Hero, Minimal, Brand) with tiles, rings or pills for statistics — also in the .acerep client report.",
-    "Fixed .acerep client report: the .roa selection now marks only the chosen folders in PC-3000, also when the .acerep was exported for selected folders only (previously the whole drive or whole folders could be selected).",
-    "Thumbnail gallery view in the report (List / Gallery, S/M/L size).",
-    "Thumbnails from RAW photos (from the JPG preview stored in the file) and videos (5-frame strip, animated in the report).",
-    "Fast thumbnails without verification: only the beginning of RAW files is read; with verification on, large files take longer. New \"Include RAW photos\" option to skip RAW files.",
-    "Watermark on thumbnails: lab logo or any image; partner reports use the partner's logo, reports without lab data a text watermark.",
-    "One-page PDF report for the client (also without lab data and for a partner, optionally in ZIP); can be turned off in Settings.",
-    "HEIC/HEIF structure check in Content Analysis; search across all partitions in the report.",
-    "Fixes: crashes on damaged videos, settings not always remembered, size sliders in new skins; reports without verification show only file totals; messages after generating thumbnails follow the app language."
+    "8 new languages: Ukrainian, Turkish, Romanian, Czech, Serbian, Slovak, Hungarian and Dutch — 22 languages in the app, HTML, PDF and .acerep reports, sorted alphabetically.",
+    "PDF report settings window: choose sections and top folders (automatic or your own), edit every text and see a live preview.",
+    "Editable default texts: PDF texts, client information, pop-up text and RAW description are filled in, ready to adjust — the ↺ icon restores the default text of a single field.",
+    "Collapsible menu sections in the Generator and Settings — the app remembers which ones you keep open.",
+    "Client selection report (.acerep): instruction pop-up for the client with one-click copy of your e-mail address and a reminder after downloading the .roa file.",
+    "Report search also finds folders.",
+    "Very large folders (millions of files) are listed in full.",
+    "Live preview of the classic view shows the real report with your data.",
+    "Updated user guide."
   ]
 }
