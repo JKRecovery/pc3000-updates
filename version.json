@@ -1,15 +1,11 @@
 ﻿{
-  "version": "1.0.260",
-  "notes": "Version 1.0.260 — 22 languages, PDF report settings window with editable texts, collapsible menu, instruction pop-up in the client selection report.",
+  "version": "1.0.265",
+  "notes": "Version 1.0.265 — PDF thumbnails, DMDE lists from Mac and Linux partitions, more accurate folder counting.",
   "changelog": [
-    "8 new languages: Ukrainian, Turkish, Romanian, Czech, Serbian, Slovak, Hungarian and Dutch — 22 languages in the app, HTML, PDF and .acerep reports, sorted alphabetically.",
-    "PDF report settings window: choose sections and top folders (automatic or your own), edit every text and see a live preview.",
-    "Editable default texts: PDF texts, client information, pop-up text and RAW description are filled in, ready to adjust — the ↺ icon restores the default text of a single field.",
-    "Collapsible menu sections in the Generator and Settings — the app remembers which ones you keep open.",
-    "Client selection report (.acerep): instruction pop-up for the client with one-click copy of your e-mail address and a reminder after downloading the .roa file.",
-    "Report search also finds folders.",
-    "Very large folders (millions of files) are listed in full.",
-    "Live preview of the classic view shows the real report with your data.",
+    "PDF thumbnails: the first page of each PDF document is shown in the report next to photo, RAW and video thumbnails.",
+    "DMDE file lists from Mac and Linux partitions (APFS, HFS+, ext) are recognised, and the report shows each file's modification date from DMDE.",
+    "Folder reporting skips folder links (junctions, symbolic links) — the same files are no longer counted several times and the numbers match Windows.",
+    "HTML report: the language flags are folded into one compact list, so the statistics bar stays on one line.",
     "Updated user guide."
   ]
 }
