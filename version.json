@@ -1,11 +1,14 @@
 ﻿{
-  "version": "1.0.265",
-  "notes": "Version 1.0.265 — PDF thumbnails, DMDE lists from Mac and Linux partitions, more accurate folder counting.",
+  "version": "1.0.300",
+  "notes": "Version 1.0.300 — payments in the report, reports without system files and a matching .roa selection for PC-3000, one progress window with Stop.",
   "changelog": [
-    "PDF thumbnails: the first page of each PDF document is shown in the report next to photo, RAW and video thumbnails.",
-    "DMDE file lists from Mac and Linux partitions (APFS, HFS+, ext) are recognised, and the report shows each file's modification date from DMDE.",
-    "Folder reporting skips folder links (junctions, symbolic links) — the same files are no longer counted several times and the numbers match Windows.",
-    "HTML report: the language flags are folded into one compact list, so the statistics bar stays on one line.",
-    "Updated user guide."
+    "Payments in the report: the client can pay straight from the HTML or PDF report — online via Stripe (cards, Apple Pay, Google Pay, PayPal, iDEAL, Bancontact, Multibanco, Revolut Pay and other methods available in your country) or by bank transfer with IBAN details and a QR code. Your own message, button text, up to 3 required consents and an optional payment due date.",
+    "Reports without system junk: $MFT, $Extend, System Volume Information, Thumbs.db, .DS_Store, ._ files from Macs and similar are left out of the report, which shows how many were skipped. Editable lists in Settings, quick switch in the Generator.",
+    "The recovered data matches the report: one click creates a .roa selection file for PC-3000 with exactly the files from the report, without the system files. Import it into Data Extractor and the client gets the same number of files they saw in the report — no more questions like “the report said 2,000 files, why did I get 2,047?”. Works for .acerep and CSV reports (point to the .acerep of the task — whole partition or part of it).",
+    "One progress window with a Stop button for loading CSV, TXT, folders, .acerep files and thumbnails, with speed and time left.",
+    ".acerep reports use the same appearance settings as CSV reports: tree width and font, website, report date and language switch.",
+    "New, more visible program icon and faster hints.",
+    "Settings are no longer lost when two versions of the program are open at the same time.",
+    "Updated user guide in 6 languages (also as PDF)."
   ]
 }
