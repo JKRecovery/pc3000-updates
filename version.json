@@ -1,14 +1,10 @@
 {
-  "version": "1.0.300",
-  "notes": "Version 1.0.300 — payments in the report, reports without system files and a matching .roa selection for PC-3000, one progress window with Stop.",
+  "version": "1.0.301",
+  "notes": "Version 1.0.301 — your own payment link in the report (e.g. Redsys pay-by-link), correct sizes and dates from CSV lists with Path/Name columns, more reliable .acerep loading.",
   "changelog": [
-    "Payments in the report: the client can pay straight from the HTML or PDF report — online via Stripe (cards, Apple Pay, Google Pay, PayPal, iDEAL, Bancontact, Multibanco, Revolut Pay and other methods available in your country) or by bank transfer with IBAN details and a QR code. Your own message, button text, up to 3 required consents and an optional payment due date.",
-    "Reports without system junk: $MFT, $Extend, System Volume Information, Thumbs.db, .DS_Store, ._ files from Macs and similar are left out of the report, which shows how many were skipped. Editable lists in Settings, quick switch in the Generator.",
-    "The recovered data matches the report: one click creates a .roa selection file for PC-3000 with exactly the files from the report, without the system files. Import it into Data Extractor and the client gets the same number of files they saw in the report — no more questions like “the report said 2,000 files, why did I get 2,047?”. Works for .acerep and CSV reports (point to the .acerep of the task — whole partition or part of it).",
-    "One progress window with a Stop button for loading CSV, TXT, folders, .acerep files and thumbnails, with speed and time left.",
-    ".acerep reports use the same appearance settings as CSV reports: tree width and font, website, report date and language switch.",
-    "New, more visible program icon and faster hints.",
-    "Settings are no longer lost when two versions of the program are open at the same time.",
-    "Updated user guide in 6 languages (also as PDF)."
+    "Your own payment link: besides Stripe and bank transfer, you can paste any payment link that already contains the amount — e.g. Redsys pay-by-link, PayPal, Revolut or your bank's pay-by-link. The client ticks the consents and goes straight to the payment page; the report shows which website it is. With only a link turned on, the program does not ask for an amount. Optional fixed link (e.g. paypal.me/…) filled in automatically.",
+    "CSV lists with Path;Name;Full Name columns (also with an Ext column): file sizes and dates are now read correctly, and names containing a semicolon no longer split into wrong folders.",
+    "More reliable .acerep loading: if the built-in SQLite library is blocked on a computer (usually by an antivirus), the program loads a backup copy. If it still fails, the message shows the exact cause and how to fix it.",
+    "Updated user guide in 6 languages (also as PDF), now with a video at the top showing every feature (subtitles in 9 languages)."
   ]
 }
